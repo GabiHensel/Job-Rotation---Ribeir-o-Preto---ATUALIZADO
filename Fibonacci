@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class num2 {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("Informe um nu4181mero: ");
+		int numero = entrada.nextInt();
+		
+		int fib1=0;
+		int fib2=1;
+		int fibAtual=fib1+fib2;
+		
+		while(fibAtual<numero) {
+			fib1 = fib2;
+			fib2 = fibAtual;
+			fibAtual = fib1+fib2;
+		}
+		
+		if(fibAtual == numero) {
+			System.out.println(numero +" esta na sequencia de Fibonacci!");
+		} else {
+			System.out.println(numero +" nao esta na sequencia de Fibonacci!");
+		}
+	}
+
+}
